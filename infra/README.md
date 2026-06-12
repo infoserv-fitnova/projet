@@ -22,7 +22,7 @@ L’architecture repose sur plusieurs VLANs segmentant les rôles (administratio
 | Rôle      | Conteneurisation & supervision |
 | IP        | `10.100.151.1/24` |
 | VLAN      | `151` |
-| Services  | - Portainer <br> - Booked Scheduler <br> - MariaDB <br> - Zabbix |
+| Services  | - Portainer <br> - Booked Scheduler <br> - MariaDB <br> - Zabbix <br> - Nginx |
 
 ### VM Active Directory
 | Propriété | Valeur |
