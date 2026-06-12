@@ -38,10 +38,23 @@ L’architecture repose sur plusieurs VLANs segmentant les rôles (administratio
 | IP        | `10.100.153.1/24` |
 | VLAN      | `153` |
 
+### VM Admin
+| Propriété | Valeur |
+|-----------|--------|
+| Rôle      | Administration |
+| IP        | `10.100.152.1/24` |
+| VLAN      | `152` |
+
+### VM WireGuard
+| Propriété | Valeur |
+|-----------|--------|
+| Rôle      | VPN sécurisé |
+| IP        | À définir |
+
 ### VM pfSense
 | Propriété | Valeur |
 |-----------|--------|
-| Rôle      | Supervision industrielle / capteurs |
+| Rôle      | Pare-feu / routeur |
 | IP        | `10.3.0.198` |
 
 ---
@@ -56,4 +69,4 @@ Proxmox VE (fitnova)
 ├── VLAN 153 (10.100.153.0/24)
 │   └── 10.100.153.1  → VM Salarié
 └── Réseau dédié
-    └── 10.3.0.198    → VM pfSense
+    └── 10.3.0.198    → VM pfSense (pare-feu)
