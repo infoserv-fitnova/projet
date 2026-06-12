@@ -6,6 +6,8 @@
 
 ###
 
+Groupe : Philibert, Naomie, Rafael
+
 <p align="left">
 FitNova est un projet visant à concevoir et déployer une infrastructure complète pour une plateforme dédiée au fitness et à la gestion d’activités sportives.<br><br>
 
