@@ -38,13 +38,6 @@ L’architecture repose sur plusieurs VLANs segmentant les rôles (administratio
 | IP        | `10.100.153.1/24` |
 | VLAN      | `153` |
 
-### VM Admin
-| Propriété | Valeur |
-|-----------|--------|
-| Rôle      | Administration |
-| IP        | `10.100.152.1/24` |
-| VLAN      | `152` |
-
 ### VM pfSense
 | Propriété | Valeur |
 |-----------|--------|
@@ -60,9 +53,7 @@ Proxmox VE (fitnova)
 ├── VLAN 151 (10.100.151.0/24)
 │   ├── 10.100.151.1  → VM Docker (Portainer, Booked, MariaDB, Zabbix)
 │   └── 10.100.151.2  → VM Active Directory
-├── VLAN 152 (10.100.152.0/24)
-│   └── 10.100.152.1  → VM Admin
 ├── VLAN 153 (10.100.153.0/24)
 │   └── 10.100.153.1  → VM Salarié
 └── Réseau dédié
-    └── 10.3.0.198    → VM pSens
+    └── 10.3.0.198    → VM pfSense
