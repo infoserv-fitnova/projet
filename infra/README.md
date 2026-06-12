@@ -38,19 +38,6 @@ L’architecture repose sur plusieurs VLANs segmentant les rôles (administratio
 | IP        | `10.100.153.1/24` |
 | VLAN      | `153` |
 
-### VM Admin
-| Propriété | Valeur |
-|-----------|--------|
-| Rôle      | Administration |
-| IP        | `10.100.152.1/24` |
-| VLAN      | `152` |
-
-### VM WireGuard
-| Propriété | Valeur |
-|-----------|--------|
-| Rôle      | VPN sécurisé |
-| IP        | À définir |
-
 ### VM pfSense
 | Propriété | Valeur |
 |-----------|--------|
