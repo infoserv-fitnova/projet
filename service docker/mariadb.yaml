@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  mariadb:
+    image: mariadb:10.11
+    container_name: mariadb
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=RootSecurePassword123!
+      - MYSQL_DATABASE=fitnova_db
+      - MYSQL_USER=fitnova_user
+      - MYSQL_PASSWORD=UserSecurePassword123!
+      - TZ=Europe/Paris
+    volumes:
+      - ./data:/var/lib/mysql
+      - ./backup:/backup
+      - ./init:/docker-entrypoint-initdb.d
+    command: 
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --max_allowed_packet=256M

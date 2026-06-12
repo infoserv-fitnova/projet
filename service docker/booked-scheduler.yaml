@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  booked-web:
+    image: bookedsoftware/booked-scheduler:latest
+    container_name: booked-scheduler
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - ./config:/config
+      - ./logs:/var/log/apache2
+    environment:
+      - DB_HOST=mariadb
+      - DB_NAME=booked
+      - DB_USER=booked_user
+      - DB_PASS=ChangeMe123!
+      - TZ=Europe/Paris
+    depends_on:
+      - mariadb-booked
+    networks:
+      - booked-network
+
+  mariadb-booked:
+    image: mariadb:10.11
+    container_name: booked-mariadb
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=RootChangeMe123!
+      - MYSQL_DATABASE=booked
+      - MYSQL_USER=booked_user
+      - MYSQL_PASSWORD=ChangeMe123!
+      - TZ=Europe/Paris
+    volumes:
+      - ./db-data:/var/lib/mysql
+    networks:
+      - booked-network
+
+networks:
+  booked-network:
+    driver: bridge
